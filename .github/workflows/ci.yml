@@ -49,5 +49,7 @@ jobs:
         run: |
           git config --global user.name 'salimmtl'
           git config --global user.email 'salim.adamon@nevolia.ca'
+          git remote set-url origin https://x-access-token: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@github.com/${{ github.repository }}
           git commit -am "Automated report"
           git push
+          
