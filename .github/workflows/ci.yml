@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Integration Testing
 
 # Controls when the workflow will run
 on:
@@ -34,12 +34,12 @@ jobs:
           solution-folder: 'solutions/sharpxrm/src/unmanaged'
           solution-type: 'Unmanaged'
           overwrite-files: true
-      - uses: microsoft/powerplatform-actions/unpack-solution@v1
-        with:
-          solution-file: 'solutions/AddressValidationforDataverse_2_5_0_5_managed'
-          solution-folder: 'solutions/sharpxrm/src/managed'
-          solution-type: 'Managed'
-          overwrite-files: true
+      #- uses: microsoft/powerplatform-actions/unpack-solution@v1
+      #  with:
+      #    solution-file: 'solutions/AddressValidationforDataverse_2_5_0_5_managed'
+      #    solution-folder: 'solutions/sharpxrm/src/managed'
+      #    solution-type: 'Managed'
+      #    overwrite-files: true
       - uses: actions/upload-artifact@v3
         with:
           name: unpacked-solutions
