@@ -44,3 +44,10 @@ jobs:
         with:
           name: unpacked-solutions
           path: solutions/sharpxrm/src/unmanaged
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'salimmtl'
+          git config --global user.email 'salim.adamon@nevolia.ca'
+          git commit -am "Automated report"
+          git push
